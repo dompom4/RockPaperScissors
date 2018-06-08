@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+  
+</head>
+
+<body>
+    <div class="login-dark">
+        <form>
+            <h5 class="text-left" style="width:100%;color:rgb(237,156,156);">Player1:&nbsp;<span id ="p1"></span></h5>
+            <h5 class="text-left" style="width:100%;color:rgb(237,156,156);">Player2:&nbsp;<span id ="p2"></span></h5>
+            <div class="form-group"><input class="form-control d-table-cell" type="text" id ="playerval" placeholder="Player Name" style="width:130px;"><img src="assets/img/5x5-00000000.png"><img src="assets/img/5x5-00000000.png"><img src="assets/img/5x5-00000000.png"><button class="btn btn-primary" type="button" style="height:43px;margin:9px;" id ="change">Change</button></div>
+            <div
+                class="form-group"><img src="assets/img/icons8-rock-80.png" id="rock"><img src="assets/img/5x5-00000000.png"><img src="assets/img/icons8-paper-64.png" id ="paper"><img src="assets/img/5x5-00000000.png"><img src="assets/img/icons8-cut-80.png" id ="scissors"></div>
+    <div class="form-group"><textarea class="form-control form-control-lg" name="chat" id= "chatbox" readonly="" style="height:160px;"></textarea></div>
+    <div class="form-group"><button class="btn btn-primary float-right" type="button" id="sendchat" style="width:66px;margin:-5px;">Send</button><input class="form-control" id ="chattext" type="text" style="width:153px;"></div>
+    <h5 class="text-left" style="color:rgb(156,237,164);">Users Connected: <span id="userCon">0</span></h5>
+    </form>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $("#change").on('click', function (e) {
+       // event.preventDefault();
+    window.namechange();
+})
+$("#rock").on('click', function (e) {
+   // event.preventDefault();
+    console.log("rock");
+})
+$("#paper").on('click', function (e) {
+   // event.preventDefault();
+    console.log("paper");
+})
+$("#scissors").on('click', function (e) {
+   // event.preventDefault();
+    console.log("scissors");
+})
+$("#sendchat").on('click', function (e) {
+   // event.preventDefault();
+    console.log("Chat");
+    chatmsg();
+})
+</script>
+</body>
+
+</html>
