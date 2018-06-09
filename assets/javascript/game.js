@@ -78,6 +78,76 @@ function chatmsg(){
   
   }
 
+  function rock(){
+
+    if (window.playerNumber == 1) {
+     database.ref().update({
+        chatmsg: window.pla1+": has made a move",
+     });
+     database.ref().set({
+      player1choice: "rock",
+   });
+    // $("#p1").text(pla1);
+    }
+      else if (window.playerNumber == 2) {
+      database.ref().update({
+      chatmsg: window.pla2+": has made a move",
+     });
+     database.ref().set({
+      player2choice: "rock",
+   });
+    // $("#p2").text(pla2);
+    } 
+    
+    
+    }
+
+    function paper(){
+
+      if (window.playerNumber == 1) {
+        database.ref().update({
+          chatmsg: window.pla1+": has made a move",
+       });
+       database.ref().set({
+        player1choice: "paper",
+     });
+      // $("#p1").text(pla1);
+      }
+      else if (window.playerNumber == 2) {
+        database.ref().update({
+        chatmsg: window.pla2+": has made a move",
+       });
+       database.ref().set({
+        player2choice: "paper",
+     });
+      // $("#p2").text(pla2);
+      } 
+      
+      
+      }
+
+      function scissors(){
+        if (window.playerNumber == 1) {
+          database.ref().update({
+            chatmsg: window.pla1+": has made a move",
+         });
+         database.ref().set({
+          player1choice: "scissors",
+       });
+        // $("#p1").text(pla1);
+        }
+        else if (window.playerNumber == 2) {
+          database.ref().update({
+          chatmsg: window.pla2+": has made a move",
+         });
+         database.ref().set({
+          player2choice: "scissors",
+       });
+        // $("#p2").text(pla2);
+        } 
+        
+        
+        }
 function namechange(){
   console.log("namechange")
   if (window.playerNumber == 1) {
@@ -108,7 +178,7 @@ function namechange(){
     $("#p2").text(snapshot.val().player2);
     window.pla1 = (snapshot.val().player1);
     window.pla2 = (snapshot.val().player2);
-    $("#chatbox").append( "\n" + snapshot.val().chatmsg);
+    $("#chatbox").append(snapshot.val().chatmsg + "\n");
     // Change the HTML to reflect
    // $("#name-display").text(snapshot.val().name);
    
